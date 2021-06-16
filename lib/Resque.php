@@ -40,7 +40,8 @@ class Resque
 	 * @param mixed $server Host/port combination separated by a colon, DSN-formatted URI, or
 	 *                      a callable that receives the configured database ID
 	 *                      and returns a Resque_Redis instance, or
-	 *                      a nested array of servers with host/port pairs.
+	 *                      a nested array of servers with host/port pairs or 
+	 *			external Redis connection object.
 	 * @param int $database
      * @param string $auth
 	 */
@@ -53,7 +54,8 @@ class Resque
 	}
 
 	/**
-	 * Return an instance of the Resque_Redis class instantiated for Resque.
+	 * Return an instance of the Resque_Redis class instantiated for Resque or 
+	 * external Redis connection object.
 	 *
 	 * @return Resque_Redis Instance of Resque_Redis.
 	 */
